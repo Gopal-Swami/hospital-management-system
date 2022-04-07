@@ -1,0 +1,29 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.home-container,.booking-container{
+  height: 90vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2rem ;
+  flex-direction: column;
+}
+.booking-container{
+  justify-content: flex-start;
+}
+
+.patient-form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+td,th{
+  text-align: center;
+}
