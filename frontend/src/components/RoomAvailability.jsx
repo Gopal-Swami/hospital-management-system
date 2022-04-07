@@ -20,10 +20,10 @@ const RoomAvailability = ({ patientName }) => {
     if (patientName !== '') {
       dispatch(createBooking(patientId, patientName, roomType));
       setTimeout(() => {
-        dispatch(getBookings());
-        dispatch(getHospital());
         success && toast.success('Booking Confirmed');
         error && toast.error(error);
+        dispatch(getBookings());
+        dispatch(getHospital());
       }, 500);
     } else {
       toast.error('Please Provide Patient Name');
