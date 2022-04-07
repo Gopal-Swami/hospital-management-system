@@ -31,8 +31,8 @@ const Bookings = () => {
   resetError && toast.error(resetError);
   useEffect(() => {
     if (success) {
-      dispatch(getHospital());
       toast.success('Room And Booking Reset Completed');
+      dispatch(getHospital());
     }
     dispatch(getBookings());
   }, [dispatch, success]);
