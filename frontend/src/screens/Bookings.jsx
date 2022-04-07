@@ -30,11 +30,11 @@ const Bookings = () => {
   error && toast.error(error);
   resetError && toast.error(resetError);
   useEffect(() => {
-    dispatch(getBookings());
     if (success) {
       dispatch(getHospital());
       toast.success('Room And Booking Reset Completed');
     }
+    dispatch(getBookings());
   }, [dispatch, success]);
   return (
     <>
