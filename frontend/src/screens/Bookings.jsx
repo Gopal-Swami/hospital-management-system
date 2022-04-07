@@ -15,6 +15,11 @@ const Bookings = () => {
   const resetRoomAndBooking = () => {
     if (window.confirm('Are you sure to reset rooms and bookings ? ')) {
       dispatch(resetRoomsAndBookings());
+      setTimeout(() => {
+        toast.success('Room And Booking Reset Completed');
+        dispatch(getHospital());
+        dispatch(getBookings());
+      }, 1000);
     }
   };
   const resetRoomsAndBooking = useSelector(
@@ -29,13 +34,7 @@ const Bookings = () => {
   const { loading, error, bookings } = roomBookings;
   error && toast.error(error);
   resetError && toast.error(resetError);
-  useEffect(() => {
-    if (success) {
-      toast.success('Room And Booking Reset Completed');
-      dispatch(getHospital());
-    }
-    dispatch(getBookings());
-  }, [dispatch, success]);
+
   return (
     <>
       <div className="booking-container">
