@@ -34,7 +34,9 @@ const Bookings = () => {
   const { loading, error, bookings } = roomBookings;
   error && toast.error(error);
   resetError && toast.error(resetError);
-
+  useEffect(() => {
+    dispatch(getBookings());
+  }, [dispatch]);
   return (
     <>
       <div className="booking-container">
