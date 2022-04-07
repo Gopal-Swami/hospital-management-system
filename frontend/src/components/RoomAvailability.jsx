@@ -74,7 +74,7 @@ const RoomAvailability = ({ patientName }) => {
               </td>
             </tr>
             <tr>
-              <th scope="row">1</th>
+              <th scope="row">2</th>
               <td>Oxygen Room</td>
               <td>
                 2 Oxygen Cylinders <br /> 1 Recliner Bed <br /> 2 Non Rebreather
@@ -101,7 +101,7 @@ const RoomAvailability = ({ patientName }) => {
               </td>
             </tr>
             <tr>
-              <th scope="row">1</th>
+              <th scope="row">3</th>
               <td>ICU Room</td>
               <td>
                 1 Ventilator <br /> 1 Recliner Bed <br /> 1 Oxygen Cylinder
